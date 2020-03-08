@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for gmarket2 project
+# Scrapy settings for naver_api project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'gmarket2'
+BOT_NAME = 'naver_api'
 
-SPIDER_MODULES = ['gmarket2.spiders']
-NEWSPIDER_MODULE = 'gmarket2.spiders'
+SPIDER_MODULES = ['naver_api.spiders']
+NEWSPIDER_MODULE = 'naver_api.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'gmarket2 (+http://www.yourdomain.com)'
+#USER_AGENT = 'naver_api (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -44,9 +44,6 @@ FEED_EXPORT_ENCODING = 'utf-8'
 RETRY_ENABLED = True
 RETRY_TIMES = 2
 
-# 로그 파일
-LOG_FILE = 'log.txt'
-
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -66,7 +63,7 @@ LOG_FILE = 'log.txt'
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'gmarket.middlewares.GmarketSpiderMiddleware': 543,
+#    'naver_api.middlewares.NaverApiSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
@@ -78,7 +75,6 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy_fake_useragent.middleware.RetryUserAgentMiddleware': 401,
 }
 
-
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -87,9 +83,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'gmarket2.pipelines.Gmarket2Pipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'naver_api.pipelines.NaverApiPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
