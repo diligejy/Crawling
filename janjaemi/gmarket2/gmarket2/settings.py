@@ -41,6 +41,9 @@ FEED_EXPORT_ENCODING = 'utf-8'
 RETRY_ENABLED = True
 RETRY_TIMES = 2
 
+# 로그 파일
+LOG_FILE = 'log.txt'
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
